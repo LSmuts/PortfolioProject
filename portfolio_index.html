@@ -4,10 +4,21 @@
 <head>
 	<meta charset="utf-8">
 	<title>Lelanie Smuts Portfolio</title>
+	
+	<!-- Custom CSS -->
 	<link href="resources/portfolio.css" rel="stylesheet" type="text/css">
+	
+	<!-- Google Fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
+	
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	
 </head>
 
 <body>
@@ -17,18 +28,21 @@
 		
 		<!-- Navbar Section -->
 		<nav class="navbar">
-    		<ul class="navbar-left">
+			<div class="navbar-center">
+				<img src="resources/images/NameLogo_White.png" alt="Logo">
+			</div>
+			<ul class="navbar-left">
+			<!-- List items for the left side of the navbar -->
 				<li><a href="portfolio_index.html" active>Portfolio</a></li>
 				<li><a href="portfolio_contact.html">Contact</a></li>
-    		</ul>
-    		<div class="navbar-center">
-				<img src="resources/images/NameLogo_White.png" alt="Logo">
-    		</div>
-			<ul class="navbar-right">
-				<li><a>Portfolio</a></li>
-				<li><a>Contact</a></li>
-    		</ul>
-  		</nav>
+			</ul>
+			<div class="hamburger-menu">&#9776;</div>
+			<ul class="navbar-right navbar-right-hidden">
+			<!-- List items for the right side of the navbar (hidden initially) -->
+				<li><a href="portfolio_index.html" active>Portfolio</a></li>
+				<li><a href="portfolio_contact.html">Contact</a></li>
+			</ul>
+		</nav>
 		
 		<!-- Masthead Section -->
 		<div id="masthead-section">
