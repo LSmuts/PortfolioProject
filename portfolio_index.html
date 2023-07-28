@@ -28,21 +28,24 @@
 		
 		<!-- Navbar Section -->
 		<nav class="navbar">
-			<div class="navbar-center">
-				<img src="resources/images/NameLogo_White.png" alt="Logo">
+			<div class="hamburger">
+				<span class="bar"></span>
+				<span class="bar"></span>
+				<span class="bar"></span>
 			</div>
-			<ul class="navbar-left">
-			<!-- List items for the left side of the navbar -->
-				<li><a href="portfolio_index.html" active>Portfolio</a></li>
-				<li><a href="portfolio_contact.html">Contact</a></li>
+			<ul class="nav-menu">
+				<li class="nav-item">
+					<a href="portfolio_index.html" class="nav-link">Portfolio</a>
+				</li>
+				<li class="nav-item">
+					<a href="portfolio_contact.html" class="nav-link">Contact</a>
+				</li>
 			</ul>
-			<div class="hamburger-menu">&#9776;</div>
-			<ul class="navbar-right navbar-right-hidden">
-			<!-- List items for the right side of the navbar (hidden initially) -->
-				<li><a href="portfolio_index.html" active>Portfolio</a></li>
-				<li><a href="portfolio_contact.html">Contact</a></li>
-			</ul>
+			<div id="logo">
+				<img src="resources/images/NameLogo_White.png" class="nav-branding" alt="Logo">
+			</div>
 		</nav>
+
 		
 		<!-- Masthead Section -->
 		<div id="masthead-section">

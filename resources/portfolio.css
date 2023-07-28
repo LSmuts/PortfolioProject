@@ -1,6 +1,12 @@
 @charset "utf-8";
 /* CSS Document */
 
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
 body {
 	display: flex;
 	flex-direction: column;
@@ -17,84 +23,83 @@ body {
 
 /* Navbar Section */
 
-.navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  color: #fff;
-  height: 60px;
-  padding: 40px 0;
-  margin: 0 100px;
-  border-bottom: solid 3px #543654;
-}
-
-.navbar {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	color: #fff;
-	height: 60px;
-	padding: 20px 0 10px 0;
-	margin: 0 100px;
-	border-bottom: solid 3px #543654;
-}
-
-.navbar ul {
+li {
 	list-style: none;
+}
+
+a {
+	color: #FFF;
+	text-decoration: none;
+}
+
+.navbar {
+    min-height: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    border-bottom: solid 3px #543654;
+    position: relative;
+}
+
+.nav-menu {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 2.5rem;
 	margin: 0;
 	padding: 0;
+}
+
+.nav-item {
+	margin: 0 10px;
+}
+
+.nav-branding {
+    max-height: 3.125rem;
+}
+
+#logo {
+	flex: 1;
 	display: flex;
-	align-items: center;
+	justify-content: center;
 }
 
-.navbar-left li {
-	margin-right: 20px;
+.logo-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
 }
 
-.navbar-left li:last-child {
-	margin-right: 0;
+.nav-link {
+	transition: 0.7s ease;
 }
 
-.navbar-left li a {
-	color: #fff;
-	text-decoration: none;
-	font-size: 16px;
+.nav-link:hover {
+	color: #543654;
 }
 
-.navbar-center {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.navbar-center img {
-	max-height: 50px;
-}
-
-.navbar-right-hidden {
-	visibility: hidden;
-}
-
-/* CSS to show the dropdown menu when .show-dropdown is applied */
-.navbar-right-hidden.show-dropdown {
-  display: flex;
-  /* Add any other styles needed for the dropdown appearance */
-}
-
-/* Hamburger menu styles */
-.hamburger-menu {
+.hamburger {
 	display: none;
-	font-size: 24px;
 	cursor: pointer;
-	padding: 10px;
+}
+
+.bar {
+	display: block;
+	width: 25px;
+	height: 3px;
+	margin: 5px auto;
+	-webkit-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+	background-color: #FFF;
 }
 
 /* Masthead Section */
 
 #masthead-section {
 	position: relative;
-	padding: 100px 0;
-	margin: 0 100px;
+	padding: 6.25rem 0;
+	margin: 3.125rem 6.25rem;
 }
 
 #masthead-text-background {
@@ -108,7 +113,7 @@ body {
 
 #masthead-text {
 	width: 100%;
-	max-width: 464px;
+	max-width: 500px;
 	padding: 20px 50px;
 }
 
@@ -116,6 +121,7 @@ h1 {
 	color: #FFF;
 	font-size: 2.25rem;
 	font-weight: 700;
+	margin-bottom: 1rem;
 }
 
 #intro {
@@ -246,38 +252,35 @@ h1 {
 /* Tablet - Portrait Layout */
 
 @media only screen and (max-width: 768px) and (orientation: portrait) {
-  .navbar {
-    flex-direction: column; /* Stack the items vertically */
-  }
-
-  .navbar-left {
-    text-align: center; /* Center the left items horizontally */
-    margin-bottom: 10px; /* Add some margin for spacing below the left items */
-  }
-
-  .navbar-center {
-    margin-bottom: 10px; /* Add some margin for spacing below the logo */
-  }
-
-  .navbar-right {
-    text-align: center; /* Center the right items horizontally */
-  }
-
-  .navbar-right, .navbar-right-hidden {
-    display: none; /* Hide the right items initially */
-  }
-
-  /* Show the right items when the hamburger menu is visible */
-  .hamburger-menu.active + .navbar-right {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .hamburger-menu {
-    margin: 10px 0; /* Add some margin for spacing */
-    text-align: right; /* Align the hamburger menu to the right */
-    cursor: pointer;
-  }
+	.hamburger {
+		display: block;
+	}
+	.hamburger.active .bar:nth-child(2) {
+		opacity: 0;
+	}
+	.hamburger.active .bar:nth-child(1) {
+		transform: translateY(8px) rotate(45deg);
+	}
+	.hamburger.active .bar:nth-child(3) {
+		transform: translateY(-8px) rotate(-45deg);
+	}
+	.nav-menu {
+		position: fixed;
+		left: -100%;
+		top: 70px;
+		gap: 0;
+		flex-direction: column;
+		background-color: #353535;
+		width: 100%;
+		text-align: center;
+		transition: 0.3s;
+	}
+	.nav-item {
+		margin: 1rem 0;
+	}
+	.nav-menu.active {
+		left: 0;
+	}
 }
 
 /* Phone - Portrait Layout */

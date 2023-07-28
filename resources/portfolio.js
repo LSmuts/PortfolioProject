@@ -1,12 +1,15 @@
 // JavaScript Document
 
 // JavaScript to toggle the dropdown menu
-document.addEventListener("DOMContentLoaded", function () {
-  var hamburgerMenu = document.querySelector(".hamburger-menu");
-  var navbarRightHidden = document.querySelector(".navbar-right-hidden");
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");
 
-  hamburgerMenu.addEventListener("click", function () {
-  console.log("Hamburger menu clicked");
-  navbarRightHidden.classList.toggle("show-dropdown");
-  });
-});
+hamburger.addEventListener("click", () => {
+	hamburger.classList.toggle("active");
+	navMenu.classList.toggle("active");
+})
+
+document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
+	hamburger.classList.remove("active");
+	navMenu.classList.remove("active");
+}))
