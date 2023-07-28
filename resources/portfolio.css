@@ -35,40 +35,32 @@ a {
 .navbar {
     min-height: 4rem;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 1.5rem;
+    padding: 2.5rem;
     border-bottom: solid 3px #543654;
     position: relative;
 }
 
 .nav-menu {
 	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	gap: 2.5rem;
-	margin: 0;
-	padding: 0;
+    align-items: center;
+    gap: 2.5rem;
+    margin-right: auto; /* Pushes the nav-menu to the left */
 }
 
 .nav-item {
 	margin: 0 10px;
 }
 
-.nav-branding {
-    max-height: 3.125rem;
-}
-
 #logo {
-	flex: 1;
-	display: flex;
-	justify-content: center;
-}
-
-.logo-container {
-    flex: 1;
+    flex: 1; /* Take up the remaining space */
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+
+.nav-branding {
+    max-height: 3.125rem;
 }
 
 .nav-link {
@@ -285,7 +277,7 @@ h1 {
 
 /* Phone - Portrait Layout */
 
-@media only screen and (max-width: 767px) and (orientation: portrait) {
+@media only screen and (max-width: 390px) and (orientation: portrait) {
 	.navbar {
 	flex-direction: column;
 	height: auto;
