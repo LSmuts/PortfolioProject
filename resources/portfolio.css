@@ -18,7 +18,7 @@ body {
 }
 
 #home-section {
-	padding: 0 40px;
+	padding: 0 2.5rem;
 }
 
 /* Navbar Section */
@@ -38,7 +38,6 @@ a {
     align-items: center;
     padding: 2.5rem;
     border-bottom: solid 3px #543654;
-    position: relative;
 }
 
 .nav-menu {
@@ -49,14 +48,13 @@ a {
 }
 
 .nav-item {
-	margin: 0 10px;
+	margin: 0 0.625rem;
 }
 
 #logo {
-    flex: 1; /* Take up the remaining space */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: absolute; /* Position the logo absolutely within the .navbar */
+    left: 50%; /* Move the logo to the center horizontally */
+    transform: translateX(-50%); /* Adjust for the logo's width to center it perfectly */
 }
 
 .nav-branding {
@@ -106,7 +104,7 @@ a {
 #masthead-text {
 	width: 100%;
 	max-width: 500px;
-	padding: 20px 50px;
+	padding: 1.25rem 3.125rem;
 }
 
 h1 {
@@ -120,7 +118,7 @@ h1 {
 	color: #FFF;
 	font-size: 1rem;
 	font-weight: 300;
-	line-height: 40px;
+	line-height: 2.5rem;
 }
 
 #profile-pic {
@@ -136,7 +134,7 @@ h1 {
 /* Portfolio Section */
 
 #portfolio-section {
-	padding: 0 40px;
+	padding: 0 2.5rem;
 }
 
 .portfolio-project {
@@ -144,7 +142,7 @@ h1 {
 	align-items: center;
 	justify-content: space-between;
 	max-width: 1064px;
-	margin: 50px auto;
+	margin: 3.125rem auto;
 	background-color: #353535;
 	border-radius: 10px;
 }
@@ -156,7 +154,7 @@ h1 {
 
 .project-name {
 	color: #FFF;
-	padding: 40px;
+	padding: 2.5rem;
 	text-align: center;
 }
 
@@ -229,7 +227,6 @@ h1 {
 
 #footer-section {
 	margin-top: auto;
-	
 	flex-shrink: 0;
 	padding-bottom: 1.25rem;
 }
@@ -262,16 +259,63 @@ h1 {
 		top: 70px;
 		gap: 0;
 		flex-direction: column;
-		background-color: #353535;
+		background-color: #543654;
 		width: 100%;
 		text-align: center;
 		transition: 0.3s;
+		justify-content: center;
+		height: 110px;
 	}
 	.nav-item {
-		margin: 1rem 0;
+		margin: 1rem auto;
 	}
 	.nav-menu.active {
 		left: 0;
+		top: 6.5rem;
+		z-index: 1;
+	}
+	#logo {
+		flex: 1; /* Take up the remaining space */
+    	display: flex;
+    	justify-content: center;
+    	align-items: center;
+	}
+	#masthead-section {
+		padding: 0;
+		margin: 5rem auto;
+		display: flex;
+	}
+	#masthead-text-background {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	#masthead-text {
+		width: 100%;
+		max-width: 500px;
+		padding: 0 auto;
+	}
+
+	h1 {
+		color: #FFF;
+		font-size: 1.5rem;
+		font-weight: 700;
+		margin-bottom: 1rem;
+	}
+
+	#intro {
+		color: #FFF;
+		font-size: 0.8rem;
+		font-weight: 300;
+		line-height: 2.5rem;
+	}
+	#profile-pic {
+		position: static;
+    	top: auto;
+    	left: auto;
+    	transform: none;
+    	z-index: auto;
+		max-width: 18.75rem;
 	}
 }
 
