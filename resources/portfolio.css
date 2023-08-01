@@ -260,7 +260,7 @@ h1 {
 		gap: 0;
 		flex-direction: column;
 		background-color: #543654;
-		width: 100%;
+		width: 25%;
 		text-align: center;
 		transition: 0.3s;
 		justify-content: center;
@@ -271,7 +271,7 @@ h1 {
 	}
 	.nav-menu.active {
 		left: 0;
-		top: 6.5rem;
+		top: 6.85rem;
 		z-index: 1;
 	}
 	#logo {
@@ -289,6 +289,7 @@ h1 {
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		border-radius: 10px 0 0 10px;
 	}
 	#masthead-text {
 		width: 100%;
@@ -297,14 +298,12 @@ h1 {
 	}
 
 	h1 {
-		color: #FFF;
 		font-size: 1.5rem;
 		font-weight: 700;
 		margin-bottom: 1rem;
 	}
 
 	#intro {
-		color: #FFF;
 		font-size: 0.8rem;
 		font-weight: 300;
 		line-height: 2.5rem;
@@ -316,6 +315,25 @@ h1 {
     	transform: none;
     	z-index: auto;
 		max-width: 18.75rem;
+		border-radius: 0 10px 10px 0;
+	}
+	#portfolio-section {
+		padding: 0 2.5rem;
+		margin-bottom: 5rem auto;
+	}
+	.portfolio-project {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		max-width: 1064px;
+		margin: 0 auto 5rem auto;
+		background-color: #353535;
+		border-radius: 10px;
+	}
+
+	.project-image img {
+		max-height: 20rem;
+		display: block;
 	}
 }
 
@@ -323,47 +341,85 @@ h1 {
 
 @media only screen and (max-width: 390px) and (orientation: portrait) {
 	.navbar {
-	flex-direction: column;
-	height: auto;
-  }
-	
-	.navbar-left {
-	margin-bottom: 10px;
-  }
-	
-	.navbar-left li {
-	margin: 0;
-	padding: 5px 0;
-	border-bottom: 1px solid #fff;
-  }
+		padding: 1rem 0;
+	}
+	.hamburger {
+		display: block;
+	}
+	.hamburger.active .bar:nth-child(2) {
+		opacity: 0;
+	}
+	.hamburger.active .bar:nth-child(1) {
+		transform: translateY(8px) rotate(45deg);
+	}
+	.hamburger.active .bar:nth-child(3) {
+		transform: translateY(-8px) rotate(-45deg);
+	}
+	.nav-menu {
+		position: fixed;
+		left: -100%;
+		top: 70px;
+		gap: 0;
+		flex-direction: column;
+		background-color: #543654;
+		width: 25%;
+		text-align: center;
+		transition: 0.3s;
+		justify-content: center;
+		height: 110px;
+	}
+	.nav-item {
+		margin: 1rem auto;
+	}
+	.nav-menu.active {
+		left: 0;
+		top: 3.85rem;
+		z-index: 1;
+	}
+	.nav-branding {
+		max-width: 12rem;
+	}
+	#masthead-section {
+		padding: 0;
+		margin: 3rem auto;
+		display: block;
+	}
+	#masthead-text-background {
+		border-radius: 10px;
+		margin-bottom: 2rem;
+	}
+	#masthead-text {
+		width: 100%;
+		padding: 1.25rem;
+	}
+	h1 {
+		font-size: 1.2rem;
+		font-weight: 700;
+		margin-bottom: 1rem;
+	}
+	#profile-pic {
+		position: static;
+    	top: auto;
+    	left: auto;
+    	transform: none;
+    	z-index: auto;
+		width: 100%;
+		border-radius: 10px;
+	}
+	#portfolio-section {
+		padding: 0 2.5rem;
+		margin-bottom: 5rem auto;
+	}
+	.portfolio-project {
+		display: block;
+		align-items: center;
+		justify-content: center;
+		margin: 0 auto 5rem auto;
+		border-radius: 10px;
+	}
 
-	.navbar-left li:last-child {
-    border-bottom: none;
-  }
-
-	.navbar-center {
-    text-align: center;
-  }
-	.nav-links {
-    display: none;
-  }
-  
-  .hamburger-menu {
-    display: block;
-  }
-  
-  .nav-links.show {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    background-color: #444;
-    padding: 10px 0;
-  }
-  
-  .nav-links.show li {
-    padding: 10px;
-  }
+	.project-image img {
+		width: 100%;
+		display: block;
+	}
 }
