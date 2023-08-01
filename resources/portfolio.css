@@ -335,6 +335,18 @@ h1 {
 		max-height: 20rem;
 		display: block;
 	}
+	#contact-wrapper {
+		display: block;
+		justify-content: center;
+	}
+	#contact-info {
+		justify-content: center;
+		padding: 0;
+		margin-bottom: 2rem;
+	}
+	#contact-message {
+		text-align: center;
+	}
 }
 
 /* Phone - Portrait Layout */
@@ -421,5 +433,30 @@ h1 {
 	.project-image img {
 		width: 100%;
 		display: block;
+	}
+	#contact-section {
+		justify-content: center;
+		margin: 3rem auto;
+		width: 100%;
+	}
+	#contact-wrapper {
+		display: block;
+		justify-content: center;
+		padding: 0 2.5rem;
+	}
+	#contact-info {
+		justify-content: center;
+		padding: 0;
+		margin-bottom: 2rem;
+	}
+	#contact-message {
+		text-align: center;
+	}
+	.contact-line img {
+		max-width: 2rem;
+		margin-right: 1.5rem;
+	}
+	.contact-line span {
+		font-size: 0.8rem;
 	}
 }
